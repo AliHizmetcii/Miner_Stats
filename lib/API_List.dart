@@ -6,11 +6,9 @@ class API_List {
     switch (p) {
       case 'Ethermine':
         API = "https://api.ethermine.org/miner/$WalletID/dashboard";
-        StatsFromAPIState().getStats();
         break;
       case '2miners':
         API = "https://$c.2miners.com/api/accounts/$WalletID";
-        StatsFromAPIState().getStats();
         break;
     }
     return API;

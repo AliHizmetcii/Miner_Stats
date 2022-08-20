@@ -147,9 +147,10 @@ class _MiningStatsState extends State<MiningStats> {
                     child: IconButton(
                       icon: const Icon(Icons.add),
                       tooltip: 'Save Worker',
-                      onPressed: () async {
-                        setState(() {
+                      onPressed: (){
+                        setState((){
                           API = API_List().returnAPI(dropdownValue1,dropdownValue2).toString();
+                          StatsFromAPIState().getStats();
                           workerList.add(const WorkerWidget());
                           Navigator.push(
                             context,
